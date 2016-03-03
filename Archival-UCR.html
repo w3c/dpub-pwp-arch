@@ -115,6 +115,46 @@ edDraftURI:           "http://w3c.github.io/dpub-pwp-arch/Archival-UCR.html",
   </dl>
 </section>
 
+<section id="LOCKSS">
+    <h2> Preservation by caching, format migration on access -- a use case based on LOCKSS </h2>
+    <dl>
+        <dt>Description</dt>
+        <dd>Digital preservation is challenging because digital content must be rendered by software
+            agents that evolve and change over time. In the case of the Open Web platform, Web
+            browsers, HTML standards, CSS specs and rendering agents evolve. Accordingly document formats 
+            evolve as well to ensure that the presentation of content is as intended. For this reason 
+            content that has been captured in the past needs to be reformatted, i.e. have its formatting
+            refreshed to continue to be viable in new Web browsers. This process is called format
+            migration. LOCKSS uses a caching approach to update files preserved and 
+            postpones archive-based format migration until a user actually requests the preserved content.
+            LOCKSS crawls publisher Websites to retrieve the content it preserves and then disseminates
+            this content by acting as a proxy cache for subsequent requests from Web Browsers, updating cached files
+            as necessary for as long as a publisher copy remains available.  
+            LOCKSS recognizes the need for format migration based on mismatches between the Accept: header
+            provided by a Web Browser when requesting content and the MIME type of the preserved content. 
+            A digitized registry of converters is then used to find and invoke an appropriate converter. 
+            If no converter is found a 406 (Not Acceptable) response is generated. </dd>
+        <dt>Requirement(s)</dt>
+        <dd>Ability for Archiving Service to cache PWP documents; Reliance on HTTP Accept: Headers</dd>
+        <dt>Stakeholder(s)</dt>
+        <dd>ARCHIVING-SERVICES, LIBRARIES,
+            PUBLISHERS-ALL,  USERS-ALL. </dd>
+        <dt>Relations/dependencies</dt>
+        <dd>Optional, links to other use cases. </dd>
+        <dt>Relevant W3C group(s)/specification(s)</dt>
+        <dd>HTTP.</dd>
+        <dt>External relevant group(s)/specification(s)</dt>
+        <dd>Where there are external groups/specifications that address on this problem in whole or
+            part.</dd>
+        <dt>Comments</dt>
+        <dd>Are there implications here for PWP reliance on Service Workers acting as caches, e.g., as described in sections Sections 5.1 &amp; 5.2 of PWD draft?</dd>
+        <dt>Created By</dt>
+        <dd>Tim Cole</dd>
+        <dt>Status</dt>
+        <dd>NEW (in Progress)</dd>
+    </dl>
+</section>
+
     </section>
             <section id="references" class="appendix">
       <h2>References</h2>
