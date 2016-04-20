@@ -88,13 +88,14 @@ edDraftURI:           "http://w3c.github.io/dpub-pwp-arch/Archival-UCR.html",
     <section>
       <h2>Use Cases</h2>
      
-<section id="template">
+<section id="InitialHarvest">
   <h2>
-    Use Case Template: [put here the title of the use case]
+    Initial Capture of a PWP by an Archiving Service
   </h2>
   <dl>
     <dt>Description</dt>
-      <dd>Plain english scenario which specifies relevant actors and intended/desired flow of events.</dd>
+      <dd>An archival service wants to harvest (spider) a PWP, and expects to find in the manifest 
+      what it will need to make sure it gets all the pieces of the PWP that need to be archived, even if on separate servers.</dd>
     <dt>Requirement(s)</dt>
       <dd>List of requirements drawn from the above Description.</dd>
     <dt>Stakeholder(s)</dt>
@@ -109,37 +110,154 @@ edDraftURI:           "http://w3c.github.io/dpub-pwp-arch/Archival-UCR.html",
     <dt>Comments</dt>
       <dd>Any additional info (clarifications, etc.).</dd>
     <dt>Created By</dt>
-      <dd>name of first (original) author of the use case.</dd>
+      <dd>Nicholas Taylor</dd>
     <dt>Status</dt>
       <dd>Always uses one of the values NEW | REJECTED | ACCEPTED. </dd>
   </dl>
 </section>
 
-<section id="LOCKSS">
-    <h2>Format migration on access -- a use case based on LOCKSS </h2>
-    <dl>
-        <dt>Description</dt>
-        <dd>In order to support format migration on access, an Archiving Service in respose to a user request for a 
-            PWP must be able to recognize when all or part of an archived PWP can no longer be rendered due to format obsolence. </dd>
-        <dt>Requirement(s)</dt>
-        <dd>???</dd>
-        <dt>Stakeholder(s)</dt>
-        <dd>ARCHIVING-SERVICES, LIBRARIES,
-            PUBLISHERS-ALL,  USERS-ALL. </dd>
-        <dt>Relations/dependencies (links to other use cases)</dt>
-        <dd>??? </dd>
-        <dt>Relevant W3C group(s)/specification(s)</dt>
-        <dd></dd>
-        <dt>External relevant group(s)/specification(s)</dt>
-        <dd>Where there are external groups/specifications that address on this problem in whole or
-            part.</dd>
-        <dt>Comments</dt>
-        <dd></dd>
-        <dt>Created By</dt>
-        <dd>Tim Cole</dd>
-        <dt>Status</dt>
-        <dd>NEW (in Progress)</dd>
-    </dl>
+<section id="Versioning">
+  <h2>
+    A new Version of a PWP Component is Published
+  </h2>
+  <dl>
+    <dt>Description</dt>
+      <dd>An archival service needs to update an Archival Information Package (i.e., a previously harvested PWP)
+          because a new version of a component of the PWP has been published. (Key questions: Does the manifest keep
+          track when new versions of a PWP component comes out? Are new versions of components automatically assumed
+          to replace original components of the PWP?)</dd>
+    <dt>Requirement(s)</dt>
+      <dd>List of requirements drawn from the above Description.</dd>
+    <dt>Stakeholder(s)</dt>
+      <dd>Always use a consistent and preferably predefined value: ARCHIVING-SERVICES, LIBRARIES, PUBLISHERS-ALL, PUBLISHERS-STEM, USERS-ALL, USERS-A11Y, RETAILERS, IMPLEMENTERS. 
+      New values can be added to this space as they are needed. </dd>
+    <dt>Relations/dependencies</dt>
+      <dd>Optional, links to other use cases. </dd>
+    <dt>Relevant W3C group(s)/specification(s)</dt>
+      <dd>Where the target WG/spec is obvious, specify it.</dd>
+    <dt>External relevant group(s)/specification(s)</dt>
+      <dd>Where there are external groups/specifications that address on this problem in whole or part.</dd>
+    <dt>Comments</dt>
+      <dd>Any additional info (clarifications, etc.).</dd>
+    <dt>Created By</dt>
+      <dd>Nicholas Taylor</dd>
+    <dt>Status</dt>
+      <dd>Always uses one of the values NEW | REJECTED | ACCEPTED. </dd>
+  </dl>
+</section>
+
+<section id="Errata">
+  <h2>
+    A Revision of a PWP or PWP Component is Published
+  </h2>
+  <dl>
+    <dt>Description</dt>
+      <dd>An archival service needs to update an Archival Information Package (i.e., a previously harvested PWP)
+          because it or one of its components has been revised, e.g., a spelling error corrected. (Is this distinct from
+          #Versioning?)</dd>
+    <dt>Requirement(s)</dt>
+      <dd>List of requirements drawn from the above Description.</dd>
+    <dt>Stakeholder(s)</dt>
+      <dd>Always use a consistent and preferably predefined value: ARCHIVING-SERVICES, LIBRARIES, PUBLISHERS-ALL, PUBLISHERS-STEM, USERS-ALL, USERS-A11Y, RETAILERS, IMPLEMENTERS. 
+      New values can be added to this space as they are needed. </dd>
+    <dt>Relations/dependencies</dt>
+      <dd>Optional, links to other use cases. </dd>
+    <dt>Relevant W3C group(s)/specification(s)</dt>
+      <dd>Where the target WG/spec is obvious, specify it.</dd>
+    <dt>External relevant group(s)/specification(s)</dt>
+      <dd>Where there are external groups/specifications that address on this problem in whole or part.</dd>
+    <dt>Comments</dt>
+      <dd>Any additional info (clarifications, etc.).</dd>
+    <dt>Created By</dt>
+      <dd>????</dd>
+    <dt>Status</dt>
+      <dd>Always uses one of the values NEW | REJECTED | ACCEPTED. </dd>
+  </dl>
+</section>
+
+<section id="RetractionNotice">
+  <h2>
+    A Retraction Notice of a PWP or PWP Component is Issued (but the original PWP Remains)
+  </h2>
+  <dl>
+    <dt>Description</dt>
+      <dd>An archival service needs to harvest the retraction notice and update the Archival Information Package for 
+      the original PWP to include / link to the Retraction Notice. (Need to clarify likely action here and if archives 
+      in practice use more than one approach, may need more use cases.)</dd>
+    <dt>Requirement(s)</dt>
+      <dd>List of requirements drawn from the above Description.</dd>
+    <dt>Stakeholder(s)</dt>
+      <dd>Always use a consistent and preferably predefined value: ARCHIVING-SERVICES, LIBRARIES, PUBLISHERS-ALL, PUBLISHERS-STEM, USERS-ALL, USERS-A11Y, RETAILERS, IMPLEMENTERS. 
+      New values can be added to this space as they are needed. </dd>
+    <dt>Relations/dependencies</dt>
+      <dd>Optional, links to other use cases. </dd>
+    <dt>Relevant W3C group(s)/specification(s)</dt>
+      <dd>Where the target WG/spec is obvious, specify it.</dd>
+    <dt>External relevant group(s)/specification(s)</dt>
+      <dd>Where there are external groups/specifications that address on this problem in whole or part.</dd>
+    <dt>Comments</dt>
+      <dd>Any additional info (clarifications, etc.).</dd>
+    <dt>Created By</dt>
+      <dd>Ayla Stein</dd>
+    <dt>Status</dt>
+      <dd>Always uses one of the values NEW | REJECTED | ACCEPTED. </dd>
+  </dl>
+</section>
+
+<section id="TakeDown">
+  <h2>
+    A PWP or PWP Component is Taken Down
+  </h2>
+  <dl>
+    <dt>Description</dt>
+      <dd>An archival service needs to update an Archival Information Package (i.e., a previously harvested PWP)
+          because it or one of its components has been taken down by the publisher.</dd>
+    <dt>Requirement(s)</dt>
+      <dd>List of requirements drawn from the above Description.</dd>
+    <dt>Stakeholder(s)</dt>
+      <dd>Always use a consistent and preferably predefined value: ARCHIVING-SERVICES, LIBRARIES, PUBLISHERS-ALL, PUBLISHERS-STEM, USERS-ALL, USERS-A11Y, RETAILERS, IMPLEMENTERS. 
+      New values can be added to this space as they are needed. </dd>
+    <dt>Relations/dependencies</dt>
+      <dd>Optional, links to other use cases. </dd>
+    <dt>Relevant W3C group(s)/specification(s)</dt>
+      <dd>Where the target WG/spec is obvious, specify it.</dd>
+    <dt>External relevant group(s)/specification(s)</dt>
+      <dd>Where there are external groups/specifications that address on this problem in whole or part.</dd>
+    <dt>Comments</dt>
+      <dd>Any additional info (clarifications, etc.).</dd>
+    <dt>Created By</dt>
+      <dd>Ayla Stein</dd>
+    <dt>Status</dt>
+      <dd>Always uses one of the values NEW | REJECTED | ACCEPTED. </dd>
+  </dl>
+</section>
+
+<section id="HealthCheck">
+  <h2>
+    An Archived PWP needs to be validated periodically while in archive in order to know when format migration is required.
+  </h2>
+  <dl>
+    <dt>Description</dt>
+      <dd>An archival service needs to validate that a previously harvested PWP and all of its components 
+          are still viable in order to determine when format migration is required.</dd>
+    <dt>Requirement(s)</dt>
+      <dd>List of requirements drawn from the above Description.</dd>
+    <dt>Stakeholder(s)</dt>
+      <dd>Always use a consistent and preferably predefined value: ARCHIVING-SERVICES, LIBRARIES, PUBLISHERS-ALL, PUBLISHERS-STEM, USERS-ALL, USERS-A11Y, RETAILERS, IMPLEMENTERS. 
+      New values can be added to this space as they are needed. </dd>
+    <dt>Relations/dependencies</dt>
+      <dd>Optional, links to other use cases. </dd>
+    <dt>Relevant W3C group(s)/specification(s)</dt>
+      <dd>Where the target WG/spec is obvious, specify it.</dd>
+    <dt>External relevant group(s)/specification(s)</dt>
+      <dd>Where there are external groups/specifications that address on this problem in whole or part.</dd>
+    <dt>Comments</dt>
+      <dd>Any additional info (clarifications, etc.).</dd>
+    <dt>Created By</dt>
+      <dd>Tim Cole</dd>
+    <dt>Status</dt>
+      <dd>Always uses one of the values NEW | REJECTED | ACCEPTED. </dd>
+  </dl>
 </section>
 
     </section>
