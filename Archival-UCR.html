@@ -23,7 +23,7 @@
           previousMaturity: "",
           previousPublishDate:  "",
           wg:           "Digital Publishing Interest Group",
-          wgURI:        "http://www.w3.org/dpub/IG/",
+          wgURI:        "https://www.w3.org/dpub/IG/",
           wgPublicList: "public-digipub-ig",
           wgPatentURI:  "",
 noRecTrack : "true",
@@ -90,88 +90,122 @@ edDraftURI:           "http://w3c.github.io/dpub-pwp-arch/Archival-UCR.html",
      
 <section id="InitialHarvest">
   <h2>
-    Initial Capture of a PWP by an Archiving Service
+    Initial harvest of a PWP by an archiving service
   </h2>
   <dl>
     <dt>Description</dt>
-      <dd>An archival service wants to harvest (spider) a PWP, and expects to find in the manifest 
-      what it will need to make sure it gets all the pieces of the PWP that need to be archived, even if on separate servers.</dd>
+      <dd>An archiving service wants to harvest a PWP.</dd>
     <dt>Requirement(s)</dt>
-      <dd>List of requirements drawn from the above Description.</dd>
+      <dd>
+        <ul>
+          <li>The archiving service must have a way to discover the locations of all the components of the PWP.</li>
+          <li>All components of the PWP must be dereferenceable by the archiving service.</li>
+        /ul>
+      </dd>
     <dt>Stakeholder(s)</dt>
-      <dd>Always use a consistent and preferably predefined value: ARCHIVING-SERVICES, LIBRARIES, PUBLISHERS-ALL, PUBLISHERS-STEM, USERS-ALL, USERS-A11Y, RETAILERS, IMPLEMENTERS. 
-      New values can be added to this space as they are needed. </dd>
+      <dd>ARCHIVING-SERVICES, IMPLEMENTERS, PUBLISHERS-ALL</dd>
     <dt>Relations/dependencies</dt>
-      <dd>Optional, links to other use cases. </dd>
+      <dd>Optional, links to other use cases.</dd>
     <dt>Relevant W3C group(s)/specification(s)</dt>
       <dd>Where the target WG/spec is obvious, specify it.</dd>
     <dt>External relevant group(s)/specification(s)</dt>
-      <dd>Where there are external groups/specifications that address on this problem in whole or part.</dd>
+      <dd><a href="http://www.openarchives.org/rs/resourcesync">ResourceSync Framework Specification (ANSI/NISO Z39.99-2014)</a></dd>
     <dt>Comments</dt>
       <dd>Any additional info (clarifications, etc.).</dd>
     <dt>Created By</dt>
       <dd>Nicholas Taylor</dd>
     <dt>Status</dt>
-      <dd>Always uses one of the values NEW | REJECTED | ACCEPTED. </dd>
+      <dd>NEW</dd>
+  </dl>
+</section>
+
+<section id="Revisioning">
+  <h2>
+    A new version of a PWP component is published
+  </h2>
+  <dl>
+    <dt>Description</dt>
+      <dd>An archiving service needs to update an Archival Information Package (i.e., a previously harvested PWP)
+          because a new version of a component of the PWP has been published.</dd>
+    <dt>Requirement(s)</dt>
+      <dd>
+        <ul>
+          <li>The archiving service must have a way to discover that an updated component of the PWP with an unchanged URI has been published.</li>
+          <li>The mechanism for enabling the archiving of a new version of a single component of the PWP should also scale up to multiple or all new components of the PWP.</li>
+        </ul>
+      </dd>
+    <dt>Stakeholder(s)</dt>
+      <dd>ARCHIVING-SERVICES, IMPLEMENTERS, PUBLISHERS-ALL</dd>
+    <dt>Relations/dependencies</dt>
+      <dd>Optional, links to other use cases.</dd>
+    <dt>Relevant W3C group(s)/specification(s)</dt>
+      <dd>Where the target WG/spec is obvious, specify it.</dd>
+    <dt>External relevant group(s)/specification(s)</dt>
+      <dd><a href="http://www.openarchives.org/rs/resourcesync">ResourceSync Framework Specification (ANSI/NISO Z39.99-2014)</a></dd>
+    <dt>Comments</dt>
+      <dd>The magnitude of the change to the component (e.g., correcting a spelling error versus major editorial revisions) should not otherwise matter.</dd>
+    <dt>Created By</dt>
+      <dd>Nicholas Taylor</dd>
+    <dt>Status</dt>
+      <dd>NEW</dd>
   </dl>
 </section>
 
 <section id="Versioning">
   <h2>
-    A new Version of a PWP Component is Published
+    A new PWP component is published
   </h2>
   <dl>
     <dt>Description</dt>
-      <dd>An archival service needs to update an Archival Information Package (i.e., a previously harvested PWP)
-          because a new version of a component of the PWP has been published. (Key questions: Does the manifest keep
-          track when new versions of a PWP component comes out? Are new versions of components published to the same 
-          URL automatically assumed to replace original components of the PWP?)</dd>
+      <dd>An archiving service needs to update an Archival Information Package (i.e., a previously harvested PWP)
+          because a new component of the PWP has been published.</dd>
     <dt>Requirement(s)</dt>
-      <dd>List of requirements drawn from the above Description.</dd>
+      <dd>
+        <ul>
+          <li>The archival service must have a way to discover that a new component of the PWP has been published.</li>
+          <li>The mechanism for enabling the archiving of a new component should also scale up to multiple new components of the PWP.</li>
+        </ul>
+      </dd>
     <dt>Stakeholder(s)</dt>
-      <dd>Always use a consistent and preferably predefined value: ARCHIVING-SERVICES, LIBRARIES, PUBLISHERS-ALL, PUBLISHERS-STEM, USERS-ALL, USERS-A11Y, RETAILERS, IMPLEMENTERS. 
-      New values can be added to this space as they are needed. </dd>
+      <dd>ARCHIVING-SERVICES, IMPLEMENTERS, PUBLISHERS-ALL</dd>
     <dt>Relations/dependencies</dt>
-      <dd>Optional, links to other use cases. </dd>
+      <dd>Optional, links to other use cases.</dd>
     <dt>Relevant W3C group(s)/specification(s)</dt>
       <dd>Where the target WG/spec is obvious, specify it.</dd>
     <dt>External relevant group(s)/specification(s)</dt>
-      <dd>Where there are external groups/specifications that address on this problem in whole or part.</dd>
+      <dd><a href="http://www.openarchives.org/rs/resourcesync">ResourceSync Framework Specification (ANSI/NISO Z39.99-2014)</a></dd>
     <dt>Comments</dt>
       <dd>Any additional info (clarifications, etc.).</dd>
     <dt>Created By</dt>
       <dd>Nicholas Taylor</dd>
     <dt>Status</dt>
-      <dd>Always uses one of the values NEW | REJECTED | ACCEPTED. </dd>
+      <dd>NEW</dd>
   </dl>
 </section>
 
-<section id="Errata">
+<section id="BibliographicMetadata">
   <h2>
-    A Revision of a PWP or PWP Component is Published
+    A new PWP component is published
   </h2>
   <dl>
     <dt>Description</dt>
-      <dd>An archival service needs to update an Archival Information Package (i.e., a previously harvested PWP)
-          because it or one of its components has been revised, e.g., a spelling error corrected. (Is this distinct from
-          #Versioning?)</dd>
+      <dd>An archiving service wants to harvest bibliographic metadata associated with a PWP.</dd>
     <dt>Requirement(s)</dt>
       <dd>List of requirements drawn from the above Description.</dd>
     <dt>Stakeholder(s)</dt>
-      <dd>Always use a consistent and preferably predefined value: ARCHIVING-SERVICES, LIBRARIES, PUBLISHERS-ALL, PUBLISHERS-STEM, USERS-ALL, USERS-A11Y, RETAILERS, IMPLEMENTERS. 
-      New values can be added to this space as they are needed. </dd>
+      <dd>ARCHIVING-SERVICES, IMPLEMENTERS, PUBLISHERS-ALL</dd>
     <dt>Relations/dependencies</dt>
-      <dd>Optional, links to other use cases. </dd>
+      <dd>Optional, links to other use cases.</dd>
     <dt>Relevant W3C group(s)/specification(s)</dt>
       <dd>Where the target WG/spec is obvious, specify it.</dd>
     <dt>External relevant group(s)/specification(s)</dt>
-      <dd>Where there are external groups/specifications that address on this problem in whole or part.</dd>
+      <dd><a href="https://github.com/zimeon/signposting">Signposting the scholarly web</a></dd>
     <dt>Comments</dt>
-      <dd>Any additional info (clarifications, etc.).</dd>
+      <dd>Parsing of harvested bibliographic metadata is the responsibility of the archiving service.</dd>
     <dt>Created By</dt>
-      <dd>????</dd>
+      <dd>Nicholas Taylor</dd>
     <dt>Status</dt>
-      <dd>Always uses one of the values NEW | REJECTED | ACCEPTED. </dd>
+      <dd>NEW</dd>
   </dl>
 </section>
 
@@ -190,17 +224,23 @@ edDraftURI:           "http://w3c.github.io/dpub-pwp-arch/Archival-UCR.html",
       <dd>Always use a consistent and preferably predefined value: ARCHIVING-SERVICES, LIBRARIES, PUBLISHERS-ALL, PUBLISHERS-STEM, USERS-ALL, USERS-A11Y, RETAILERS, IMPLEMENTERS. 
       New values can be added to this space as they are needed. </dd>
     <dt>Relations/dependencies</dt>
-      <dd>Optional, links to other use cases. </dd>
+      <dd>
+        <ul>
+          <li><a href="#Revisioning">A new version of a PWP component is published</a></li>
+          <li><a href="#Versioning">A new PWP component is published</a></li>
+          <li><a href="#TakeDown">A PWP or PWP component is taken down</a></li>
+        </ul>
+      </dd>
     <dt>Relevant W3C group(s)/specification(s)</dt>
       <dd>Where the target WG/spec is obvious, specify it.</dd>
     <dt>External relevant group(s)/specification(s)</dt>
       <dd>Where there are external groups/specifications that address on this problem in whole or part.</dd>
     <dt>Comments</dt>
-      <dd>Any additional info (clarifications, etc.).</dd>
+      <dd>Are there any requirements unique to this use case that are not addressed by some combination of <a href="#Revisioning">updates to existing components</a>, <a href="#Versioning">new components being published</a>, and <a href="#TakeDown">existing components being taken down</a>?</dd>
     <dt>Created By</dt>
       <dd>Ayla Stein</dd>
     <dt>Status</dt>
-      <dd>Always uses one of the values NEW | REJECTED | ACCEPTED. </dd>
+      <dd>NEW</dd>
   </dl>
 </section>
 
@@ -228,7 +268,7 @@ edDraftURI:           "http://w3c.github.io/dpub-pwp-arch/Archival-UCR.html",
     <dt>Created By</dt>
       <dd>Ayla Stein</dd>
     <dt>Status</dt>
-      <dd>Always uses one of the values NEW | REJECTED | ACCEPTED. </dd>
+      <dd>NEW</dd>
   </dl>
 </section>
 
@@ -256,7 +296,7 @@ edDraftURI:           "http://w3c.github.io/dpub-pwp-arch/Archival-UCR.html",
     <dt>Created By</dt>
       <dd>Tim Cole</dd>
     <dt>Status</dt>
-      <dd>Always uses one of the values NEW | REJECTED | ACCEPTED. </dd>
+      <dd>NEW</dd>
   </dl>
 </section>
 
@@ -272,7 +312,7 @@ edDraftURI:           "http://w3c.github.io/dpub-pwp-arch/Archival-UCR.html",
             URL:<a href='http://w3c.github.io/dpub-pwp/#libraries-and-archival-services'>
             http://w3c.github.io/dpub-pwp/#libraries-and-archival-services</a>.</dd>
             
-            <dt id="bib-dpub-use-case-template">[dpub-use-case-tempalte]</dt>
+            <dt id="bib-dpub-use-case-template">[dpub-use-case-template]</dt>
             <dd>Digital Publishing Interest Group. <a href="https://www.w3.org/dpub/IG/wiki/UseCase_Template"
             ><cite>Use Case Template</cite></a>. 8 June 2015. 
             URL: <a href="https://www.w3.org/dpub/IG/wiki/UseCase_Template">https://www.w3.org/dpub/IG/wiki/UseCase_Template</a>. </dd>
